@@ -22,7 +22,7 @@
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
   "icons": {
     "16": "images/icon.png",
@@ -32,7 +32,7 @@
   },
   "web_accessible_resources": [
         {
-            "resources": ["sound/alert.mp3"],
+            "resources": ["sound/alert.mp3","images/icon.png"],
             "matches": ["<all_urls>"]
         }
     ]

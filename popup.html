@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Pomodoro 타이머</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      width: 240px;
-      padding: 10px;
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      box-sizing: border-box;
-    }
-    .controls {
-      display: flex;
-      gap: 5px;
-    }
-    .controls button {
-      flex: 1;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer</title>
+  <link href="popup.css" rel="stylesheet">
 </head>
 <body>
-  <p id="timerDisplay">00:00</p>
-  <input id="timeInput" type="number" min="1" max="60" value="25" /> 
-  <div class="controls">
-    <button id="startStopBtn">시작</button>
-    <button id="resetBtn">종료</button>
+  <!-- todo input -->
+  <div class="goal-input">
+    <input id="goalInput" type="text" placeholder="Input your Todo" style="flex: 1;" />
+    <button id="addGoalBtn">+</button>
   </div>
+  
+  <!-- alert -->
+  <div id="customAlert" style="display:none;"></div>
+  
+  <div id="goalList"></div>
 
-  <script src="popup.js"></script>
+  <hr />
+
+  <p id="timerDisplay">00:00</p>
+  <input id="timeInput" type="number" min="1" max="60" value="30" style="width:100%;" /> 
+  <div class="controls">
+    <button id="startStopBtn">START</button>
+    <button id="resetBtn">END</button>
+  </div>
+  
+  <script src="js/popup.js"></script>
 </body>
 </html>

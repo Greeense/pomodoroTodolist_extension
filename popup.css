@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    width: 260px;
+    padding: 10px;
+}
+input, button {
+    padding: 8px;
+    margin: 3px 0;
+    box-sizing: border-box;
+}
+.controls {
+    display: flex;
+    gap: 5px;
+}
+.controls button {
+    flex: 1;
+}
+.goal-input {
+    display: flex;
+    gap: 3px;
+}
+.goal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 4px;
+}
+.goal-item.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+.goal-buttons {
+    display: flex;
+    gap: 5px;
+}
+#timerDisplay {
+    text-align:center;
+    font-size:30pt;
+    margin-top:5px;
+    margin-bottom : 5px;
+    font-weight:bold;
+}
+
+/* css */
+button {
+    padding: 8px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.7;
+}
+#addGoalBtn {
+    background-color: #0d6efd;
+}
+
+#startStopBtn {
+    background-color: #28a745;
+}
+
+#resetBtn {
+    background-color: #dc3545;
+}
+
+.goal-item button {
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.goal-item button:first-child {
+    background-color: #646464; 
+}
+
+.goal-item button:last-child {
+    background-color: rgb(179, 179, 179); 
+}
+.goal-item button.completed {
+    background-color: #0d6efd !important;
+}

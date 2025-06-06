@@ -7,18 +7,19 @@ let isRunning = false;
 function showAlert(){
     chrome.notifications.create({
         type:"basic",
-        iconUrl : "images/icon.png",
+        iconUrl : "../images/icon.png",
         title : "title",
         message  :"timer is END",
-        requireInteraction: true
+        requireInteraction: false
     });
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.scripting.executeScript({
             target: { tabId: tabs[0].id },
             func: () => {
-            const audio = new Audio(chrome.runtime.getURL("sound/alert.mp3"));
-            audio.play().catch((err) => console.error("소리 재생 실패", err));
-            },
+            const audio = new Audio(chrome.runtime.getURL("../sound/alert.mp3"));
+            //sound file 6 second;
+            audio.play().catch( () => console.error("소리 재생 실패",err));
+        },
         });
     });
 }
@@ -52,7 +53,7 @@ function startTimer() {
         }
     }, 1000);
 }
-
+//opp
 //message
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     switch(msg.action) {
@@ -69,8 +70,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             clearInterval(timer);
             isRunning = false;
             chrome.storage.local.set({remaining, isRunning:false});
-            chrome.action.setBadgeText({text:'BREAK'});
-            chrome.action.setBadgeBackgroundColor({color:'#4CAF50'});
+            chrome.action.setBadgeText({text:'REST'});
+            chrome.action.setBadgeBackgroundColor({color:'#25b3fa'});
             break;
         case 'reset':
             clearInterval(timer);
@@ -95,8 +96,8 @@ function restoreTimer(){
             startTimer();
         }else if(!res.isRunning && res.remaining > 0){
             remaining = res.remaining;
-            chrome.action.setBadgeText({text : 'BREAK'});
-            chrome.action.setBadgeBackgroundColor({color:'#4CAF50'});
+            chrome.action.setBadgeText({text : 'REST'});
+            chrome.action.setBadgeBackgroundColor({color:'##25b3fa'});
         }
     });
 }
