@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Pomodoro Timer",
+  "version": "1.0",
+  "description": "집중 시간을 관리하고, 타이머 완료 시 알림을 제공하는 Pomodoro 크롬 확장 프로그램입니다.",
+  "permissions": [
+    "storage",
+    "notifications",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "web_accessible_resources": [
+        {
+            "resources": ["sound/alert.mp3"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
