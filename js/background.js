@@ -97,7 +97,7 @@ function restoreTimer(){
         }else if(!res.isRunning && res.remaining > 0){
             remaining = res.remaining;
             chrome.action.setBadgeText({text : 'REST'});
-            chrome.action.setBadgeBackgroundColor({color:'##25b3fa'});
+            chrome.action.setBadgeBackgroundColor({color:'#25b3fa'});
         }
     });
 }
