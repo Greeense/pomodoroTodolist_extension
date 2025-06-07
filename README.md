@@ -55,13 +55,19 @@ This Chrome Extension is solely intended to help users improve focus and product
 Focus-Timer/
 ├── manifest.json
 ├── popup.html
-├── popup.js
-├── background.js
+├── popup.css
 ├── sound/
 │   └── alert.mp3
 ├── images/
 │   └── icon.png
-├── styles.css
+│   └── shot01.png
+│   └── shot02.png
+│   └── shot03.png
+│   └── shot04.png
+│   └── shot05.png
+├── js/
+│   └── background.js
+│   └── popup.js
 └── README.md
 ```
 
