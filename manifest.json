@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Pomodoro Timer",
   "version": "1.0",
-  "description": "This Chrome Extension helps users manage their focus time using the Pomodoro technique. It includes a customizable countdown timer, to-do goal tracking, desktop notifications, and sound alerts.",
+  "description": "Pomodoro Timer(alert) and Todolist",
   "permissions": [
     "storage",
     "notifications",
