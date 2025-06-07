@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Pomodoro Timer",
   "version": "1.0",
-  "description": "집중 시간을 관리하고, 타이머 완료 시 알림을 제공하는 Pomodoro 크롬 확장 프로그램입니다.",
+  "description": "This Chrome Extension helps users manage their focus time using the Pomodoro technique. It includes a customizable countdown timer, to-do goal tracking, desktop notifications, and sound alerts.",
   "permissions": [
     "storage",
     "notifications",

@@ -8,7 +8,7 @@ function showAlert(){
     chrome.notifications.create({
         type:"basic",
         iconUrl : "../images/icon.png",
-        title : "title",
+        title : "Pomodoro&TodoList",
         message  :"timer is END",
         requireInteraction: false
     });
@@ -18,7 +18,7 @@ function showAlert(){
             func: () => {
             const audio = new Audio(chrome.runtime.getURL("../sound/alert.mp3"));
             //sound file 6 second;
-            audio.play().catch( () => console.error("소리 재생 실패",err));
+            audio.play().catch( () => console.error("mp3file error",err));
         },
         });
     });
